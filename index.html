@@ -1116,13 +1116,6 @@
                         <span class="activity-check">✨</span>
                         <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
                     </div>
-                    <div class="locked-in-card" draggable="false" data-activity="music">
-                        <span class="drag-handle">☰</span>
-                        <span class="activity-emoji">🎵</span>
-                        <span class="activity-text">Music</span>
-                        <span class="activity-check">✨</span>
-                        <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
-                    </div>
                     <div class="locked-in-card" draggable="false" data-activity="strawberries">
                         <span class="drag-handle">☰</span>
                         <span class="activity-emoji">🍓</span>
@@ -1162,6 +1155,14 @@
                         <div class="adventure-content">
                             <span class="activity-emoji">🍷</span>
                             <span class="activity-text">Optional Drinks</span>
+                        </div>
+                        <span class="activity-check">❤️</span>
+                    </div>
+
+                    <div class="adventure-card" data-activity="shopping">
+                        <div class="adventure-content">
+                            <span class="activity-emoji">🛍️</span>
+                            <span class="activity-text">Shopping</span>
                         </div>
                         <span class="activity-check">❤️</span>
                     </div>
@@ -1618,7 +1619,7 @@
             const emoji = card.querySelector('.activity-emoji').textContent;
             const text = card.querySelector('.activity-text').textContent;
 
-            if (['coffee', 'dinner', 'ambiance', 'music', 'strawberries', 'massage'].includes(activityData)) {
+            if (['coffee', 'dinner', 'ambiance', 'strawberries', 'massage'].includes(activityData)) {
                 return;
             }
 
