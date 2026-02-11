@@ -168,8 +168,8 @@
 
         .cat-image {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             opacity: 0;
         }
 
@@ -181,8 +181,8 @@
         }
 
         .cat-image.russell {
-            left: -180px;
-            bottom: 80px;
+            left: -150px;
+            bottom: 50px;
             transform: scale(0);
         }
 
@@ -192,7 +192,7 @@
 
         .cat-image.marmalade {
             left: 50%;
-            bottom: -180px;
+            bottom: -150px;
             transform: translateX(-50%) scale(0);
         }
 
@@ -201,8 +201,8 @@
         }
 
         .cat-image.shambo {
-            right: -180px;
-            bottom: 80px;
+            right: -150px;
+            bottom: 50px;
             transform: scale(0);
         }
 
@@ -220,7 +220,7 @@
 
         @keyframes slideInBottom {
             to {
-                bottom: 50px;
+                bottom: 20px;
                 opacity: 1;
                 transform: translateX(-50%) scale(1);
             }
@@ -1020,45 +1020,16 @@
 
             .celebration-message {
                 font-size: 2em;
-                line-height: 1.3;
-                white-space: normal;
             }
 
             .cat-image {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
             }
 
             .start-night-btn {
                 font-size: 1.5em;
                 padding: 20px 40px;
-            }
-
-            .activities-section h2 {
-                font-size: 1.7em;
-                white-space: normal;
-                line-height: 1.3;
-            }
-
-            .section-header h2 {
-                white-space: normal;
-                line-height: 1.3;
-            }
-        }
-
-        /* iPhone 14 specific */
-        @media (max-width: 430px) {
-            html, body {
-                min-height: 100vh;
-                min-height: 100dvh;
-                background: linear-gradient(135deg, #ff6b9d 0%, #c94b7a 50%, #8b1538 100%);
-                background-attachment: fixed;
-            }
-
-            #valentine-screen,
-            #celebration-screen {
-                height: 100vh;
-                height: 100dvh;
             }
         }
     </style>
@@ -1089,7 +1060,7 @@
             </div>
 
             <div class="rejection-message" id="rejectionMessage">
-                The cats suggest you rethink your choice 🐱
+                Russell, Marmalade, and Shambo vote yes 🐱<br>Try again...
             </div>
         </div>
     </div>
@@ -1114,7 +1085,7 @@
             </header>
 
             <div class="photo-container">
-                <img src="valentine_1.jpeg" alt="Us together">
+                <span>📷 Photo of us together</span>
             </div>
 
             <!-- Locked In Section -->
@@ -1131,10 +1102,10 @@
                         <span class="activity-check">✨</span>
                         <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
                     </div>
-                    <div class="locked-in-card" draggable="false" data-activity="massage">
+                    <div class="locked-in-card" draggable="false" data-activity="dinner">
                         <span class="drag-handle">☰</span>
-                        <span class="activity-emoji">💆</span>
-                        <span class="activity-text">Back Massage</span>
+                        <span class="activity-emoji">🍝</span>
+                        <span class="activity-text">Romantic Dinner</span>
                         <span class="activity-check">✨</span>
                         <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
                     </div>
@@ -1145,13 +1116,6 @@
                         <span class="activity-check">✨</span>
                         <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
                     </div>
-                    <div class="locked-in-card" draggable="false" data-activity="dinner">
-                        <span class="drag-handle">☰</span>
-                        <span class="activity-emoji">🍝</span>
-                        <span class="activity-text">Romantic Dinner</span>
-                        <span class="activity-check">✨</span>
-                        <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
-                    </div>
                     <div class="locked-in-card" draggable="false" data-activity="strawberries">
                         <span class="drag-handle">☰</span>
                         <span class="activity-emoji">🍓</span>
@@ -1159,10 +1123,10 @@
                         <span class="activity-check">✨</span>
                         <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
                     </div>
-                    <div class="locked-in-card" draggable="false" data-activity="drinks">
+                    <div class="locked-in-card" draggable="false" data-activity="massage">
                         <span class="drag-handle">☰</span>
-                        <span class="activity-emoji">🍷</span>
-                        <span class="activity-text">Drinks</span>
+                        <span class="activity-emoji">💆</span>
+                        <span class="activity-text">Back Massage</span>
                         <span class="activity-check">✨</span>
                         <span class="return-btn" onclick="returnToAdventure(this)">↓</span>
                     </div>
@@ -1171,18 +1135,8 @@
 
             <!-- Choose Your Adventure Section -->
             <section class="activities-section">
-                <div class="section-header">
-                    <h2>Choose Your Adventure 🤍</h2>
-                    <button class="edit-btn" id="addActivityBtn" style="border-radius: 50%; width: 45px; height: 45px; padding: 0; font-size: 1.8em; line-height: 1;">+</button>
-                </div>
+                <h2>Choose Your Adventure 🤍</h2>
                 <div class="adventure-grid" id="adventureGrid">
-                    <div class="adventure-card" data-activity="shopping">
-                        <div class="adventure-content">
-                            <span class="activity-emoji">🛍️</span>
-                            <span class="activity-text">Shopping</span>
-                        </div>
-                        <span class="activity-check">❤️</span>
-                    </div>
                     <div class="adventure-card" data-activity="wii-sports">
                         <div class="adventure-content">
                             <span class="activity-emoji">🎮</span>
@@ -1197,11 +1151,26 @@
                         </div>
                         <span class="activity-check">❤️</span>
                     </div>
+                    <div class="adventure-card" data-activity="drinks">
+                        <div class="adventure-content">
+                            <span class="activity-emoji">🍷</span>
+                            <span class="activity-text">Optional Drinks</span>
+                        </div>
+                        <span class="activity-check">❤️</span>
+                    </div>
+
+                    <div class="adventure-card" data-activity="shopping">
+                        <div class="adventure-content">
+                            <span class="activity-emoji">🛍️</span>
+                            <span class="activity-text">Shopping</span>
+                        </div>
+                        <span class="activity-check">❤️</span>
+                    </div>
                 </div>
             </section>
 
             <div class="photo-container">
-                <img src="valentine_2.jpg" alt="Us together">
+                <span>📷 Photo with the cats</span>
             </div>
 
             <div class="love-message">
@@ -1213,30 +1182,15 @@
             </div>
 
             <div class="photo-container">
-                <img src="valentine_3.jpeg" alt="Us together">
+                <span>📷 Another cute photo of us</span>
+            </div>
+
+            <div class="photo-container">
+                <span>📷 Fun memory photo</span>
             </div>
 
             <div class="start-night-container">
                 <button class="start-night-btn" id="startNightBtn">Start the Night 💖</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Custom Activity Modal -->
-    <div id="customActivityModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.7); z-index: 2500; justify-content: center; align-items: center; padding: 20px;">
-        <div style="background: white; border-radius: 25px; padding: 30px; max-width: 400px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-            <h3 style="color: #c94b7a; margin-bottom: 20px; text-align: center; font-size: 1.5em;">Add Custom Activity</h3>
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Activity Name</label>
-                <input type="text" id="activityTextInput" placeholder="e.g., Ice Skating" maxlength="30" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px; font-size: 1em; font-family: 'Georgia', serif;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Emoji</label>
-                <input type="text" id="activityEmojiInput" placeholder="e.g., ⛸️" maxlength="2" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px; font-size: 1em; font-family: 'Georgia', serif;">
-            </div>
-            <div style="display: flex; gap: 10px; margin-top: 25px;">
-                <button id="cancelActivityBtn" style="flex: 1; padding: 12px; border: none; border-radius: 10px; font-size: 1em; font-family: 'Georgia', serif; font-weight: bold; cursor: pointer; background: #ddd; color: #666;">Cancel</button>
-                <button id="addActivitySubmitBtn" style="flex: 1; padding: 12px; border: none; border-radius: 10px; font-size: 1em; font-family: 'Georgia', serif; font-weight: bold; cursor: pointer; background: linear-gradient(135deg, #ff6b9d 0%, #c94b7a 100%); color: white;">Add</button>
             </div>
         </div>
     </div>
@@ -1665,7 +1619,7 @@
             const emoji = card.querySelector('.activity-emoji').textContent;
             const text = card.querySelector('.activity-text').textContent;
 
-            if (['coffee', 'dinner', 'ambiance', 'strawberries', 'massage', 'drinks'].includes(activityData)) {
+            if (['coffee', 'dinner', 'ambiance', 'strawberries', 'massage'].includes(activityData)) {
                 return;
             }
 
@@ -1769,87 +1723,11 @@
 
         document.querySelectorAll('.locked-in-card').forEach(setupDragAndDrop);
 
-        // Custom Activity Modal
-        const addActivityBtn = document.getElementById('addActivityBtn');
-        const customActivityModal = document.getElementById('customActivityModal');
-        const cancelActivityBtn = document.getElementById('cancelActivityBtn');
-        const addActivitySubmitBtn = document.getElementById('addActivitySubmitBtn');
-        const activityTextInput = document.getElementById('activityTextInput');
-        const activityEmojiInput = document.getElementById('activityEmojiInput');
-
-        addActivityBtn.addEventListener('click', () => {
-            customActivityModal.style.display = 'flex';
-            activityTextInput.value = '';
-            activityEmojiInput.value = '';
-            activityTextInput.focus();
-        });
-
-        cancelActivityBtn.addEventListener('click', () => {
-            customActivityModal.style.display = 'none';
-        });
-
-        addActivitySubmitBtn.addEventListener('click', () => {
-            const text = activityTextInput.value.trim();
-            const emoji = activityEmojiInput.value.trim();
-
-            if (text && emoji) {
-                const adventureGrid = document.getElementById('adventureGrid');
-                const newCard = document.createElement('div');
-                newCard.className = 'adventure-card';
-                newCard.dataset.activity = 'custom_' + Date.now();
-                newCard.innerHTML = `
-                    <div class="adventure-content">
-                        <span class="activity-emoji">${emoji}</span>
-                        <span class="activity-text">${text}</span>
-                    </div>
-                    <span class="activity-check">❤️</span>
-                `;
-
-                adventureGrid.appendChild(newCard);
-
-                newCard.addEventListener('click', () => {
-                    if (!newCard.classList.contains('selected')) {
-                        newCard.classList.add('selected');
-                        const rect = newCard.getBoundingClientRect();
-                        createBurstEffect(rect.left + rect.width / 2, rect.top + rect.height / 2);
-                        if (navigator.vibrate) navigator.vibrate(50);
-                        setTimeout(() => moveToLockedIn(newCard), 1000);
-                    }
-                });
-
-                customActivityModal.style.display = 'none';
-            }
-        });
-
-        // Close modal on background click
-        customActivityModal.addEventListener('click', (e) => {
-            if (e.target === customActivityModal) {
-                customActivityModal.style.display = 'none';
-            }
-        });
-
         // Start the Night button
         const startNightBtn = document.getElementById('startNightBtn');
         const celebrationScreen = document.getElementById('celebration-screen');
 
-        startNightBtn.addEventListener('click', async () => {
-            // Copy locked in activities to clipboard
-            const lockedInCards = document.querySelectorAll('#lockedInGrid .locked-in-card');
-            const activities = Array.from(lockedInCards).map(card => {
-                const emoji = card.querySelector('.activity-emoji').textContent;
-                const text = card.querySelector('.activity-text').textContent;
-                return `${emoji} ${text}`;
-            });
-            
-            const clipboardText = activities.join('\n');
-            
-            try {
-                await navigator.clipboard.writeText(clipboardText);
-                console.log('Copied to clipboard');
-            } catch (err) {
-                console.error('Failed to copy:', err);
-            }
-
+        startNightBtn.addEventListener('click', () => {
             // Scroll to top smoothly
             window.scrollTo({ top: 0, behavior: 'smooth' });
             
